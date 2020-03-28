@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  skip_before_action :authenticate_user!
   before_action :song_find, only: [:show, :destroy, :update, :edit]
 
   def index
