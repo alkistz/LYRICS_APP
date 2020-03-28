@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+DatabaseCleaner.allow_production = true
+DatabaseCleaner.allow_remote_database_url = true
 DatabaseCleaner.clean_with(:truncation)
 
 
