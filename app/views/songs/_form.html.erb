@@ -1,0 +1,12 @@
+<%= simple_form_for(@song) do |f| %>
+  <%= f.input :user_id %>
+  <%= f.input :title %>
+  <%= f.input :artist_name %>
+  <%= f.input :album_name %>
+  <%= f.input :lyrics_original %>
+  <%= f.input :lyrics_translated %>
+  <%= f.input :link %>
+
+  <%= f.submit 'Create a new song' %>
+
+<% end %>
