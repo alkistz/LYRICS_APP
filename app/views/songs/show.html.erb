@@ -2,7 +2,7 @@
   <h1><%= @song.title %></h1>
 
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/mQH7xooHIec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="<%= @song.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
   <p>Original lyrics</p>
@@ -10,5 +10,7 @@
 
   <p>Translated lyrics</p>
   <p><%= @song.lyrics_translated %></p>
+
+  <%= link_to 'Back to songs', songs_path %>
 
 </div>
