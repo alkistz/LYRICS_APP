@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Song.destroy_all
 
 users = User.create([
   {
@@ -18,11 +20,24 @@ users = User.create([
 
 songs = Song.create([
   {
-    title: 'First song',
+    title: 'Χιλιομετρα καναμε παλι',
     artist_name: 'Alkis',
     album_name: 'PAOK Kordelio',
-    lyrics_original: 'ΠΑΟΚ εκδρομές ναρκωτικά, έτσι μάθαμε από παιδιά!',
-    lyrics_translated: 'PAOK field trips and drugs, that is how we were taught from a young age!',
+    lyrics_original: "Χιλιομετρα καναμε παλι \n
+Για την καψουρα μας την πιο μεγαλη \n
+ΠΑΟΚ, εκδρομες, ναρκωτικα \n
+Ετσι μαθαμε απο παιδια
+Δικεφαλε μονο για 'σενα
+Νιωθω τη ζωη μου στα χαμενα
+ΠΑΟΚ Ολε ολε ολε ολε-ο
+Οπου και να παιζεις θα στο λεω
+ΠΑΟΚ Ολε ολε ολε ολε-ο
+Για 'σενα θα τα σπαω και θα καιω ",
+    lyrics_translated: "We've travelled for many kilometers again, for our greatest love,
+PAOK, travel, drugs, that's how we were taught since we were kids,
+Only in front of you Two Headed Eagle, my life seems significant,
+PAOK OLE OLE OLE OLE-O, Wherever you play I'll sing it to you!
+PAOK OLE OLE OLE OLE-O, For you I'll smash and burn!",
     link: 'https://www.youtube.com/watch?v=mQH7xooHIec',
     user_id: 1
   }
