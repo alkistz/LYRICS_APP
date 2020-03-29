@@ -50,7 +50,9 @@ class SongsController < ApplicationController
   end
 
   def return_key(url)
-    key = url.match(/\watch\?v=(.*)&/)[1]
+    binding.pry
+    key = url.match(/\watch\?v=(.*)/)[1]
+
     return "https://www.youtube.com/embed/#{key[0..10]}"
   end
 
