@@ -3,7 +3,7 @@ class SongsController < ApplicationController
   before_action :song_find, only: [:show, :destroy, :update, :edit]
 
   def index
-    @songs = Song.all
+    @songs = policy_scope(Song)
   end
 
   def show
@@ -11,12 +11,17 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
+    @song.link = return_key(@song.link)
+    @song.user_id = current_user
+    authorize @song
+
     @song.save
     redirect_to song_path(@song)
   end
 
   def new
     @song = Song.new
+    authorize @song
   end
 
   def edit
@@ -24,6 +29,7 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.update(song_params)
+    @song.link = return_key(@song.link)
     redirect_to song_path(@song)
   end
 
@@ -36,10 +42,16 @@ class SongsController < ApplicationController
 
   def song_find
     @song = Song.find(params[:id])
+    authorize @song
   end
 
   def song_params
     params.require(:song).permit(:title, :artist_name, :album_name, :lyrics_original, :lyrics_translated, :link, :user_id)
+  end
+
+  def return_key(url)
+    key = url.match(/\watch\?v=(.*)$/)[1]
+    return "https://www.youtube.com/embed/#{key}"
   end
 
 end

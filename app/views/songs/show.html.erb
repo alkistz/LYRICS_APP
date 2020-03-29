@@ -1,16 +1,25 @@
 <div class="container">
-  <h1><%= @song.title %></h1>
+  <div class="top-part">
+    <h1><%= @song.title %></h1>
+
+    <div class="video">
+      <iframe width="560" height="315" src="<%= @song.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 
 
-  <iframe width="560" height="315" src="<%= @song.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="row">
+    <div class="col-sm">
+      <h4>Original lyrics</h4>
+      <pre><%= @song.lyrics_original %></pre>
+    </div>
+    <div class="col-sm">
+      <h4>Translated lyrics</h4>
+      <pre><%= @song.lyrics_translated %></pre>
+    </div>
+  </div>
 
 
-  <p>Original lyrics</p>
-  <pre><%= @song.lyrics_original %></pre>
-
-  <p>Translated lyrics</p>
-  <pre><%= @song.lyrics_translated %></pre>
-
-  <%= link_to 'Back to songs', songs_path %>
+  <%= link_to 'Back to songs', songs_path, class: "btn btn-lg btn-primary" %>
 
 </div>
