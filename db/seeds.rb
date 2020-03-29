@@ -12,6 +12,7 @@ DatabaseCleaner.clean_with(:truncation)
 
 users = User.create([
   {
+    username: 'moyfas',
     email: 'alkiviadistzaras@yahoo.gr',
     password: 'xaxaxa123'
   }
@@ -24,9 +25,9 @@ songs = Song.create([
     title: 'Χιλιομετρα καναμε παλι',
     artist_name: 'Alkis',
     album_name: 'PAOK Kordelio',
-    lyrics_original: "Χιλιομετρα καναμε παλι \n
-Για την καψουρα μας την πιο μεγαλη \n
-ΠΑΟΚ, εκδρομες, ναρκωτικα \n
+    lyrics_original: "Χιλιομετρα καναμε παλι
+Για την καψουρα μας την πιο μεγαλη
+ΠΑΟΚ, εκδρομες, ναρκωτικα
 Ετσι μαθαμε απο παιδια
 Δικεφαλε μονο για 'σενα
 Νιωθω τη ζωη μου στα χαμενα
@@ -34,11 +35,16 @@ songs = Song.create([
 Οπου και να παιζεις θα στο λεω
 ΠΑΟΚ Ολε ολε ολε ολε-ο
 Για 'σενα θα τα σπαω και θα καιω ",
-    lyrics_translated: "We've travelled for many kilometers again, for our greatest love,
-PAOK, travel, drugs, that's how we were taught since we were kids,
-Only in front of you Two Headed Eagle, my life seems significant,
-PAOK OLE OLE OLE OLE-O, Wherever you play I'll sing it to you!
-PAOK OLE OLE OLE OLE-O, For you I'll smash and burn!",
+    lyrics_translated: "We've travelled for many kilometers again,
+for our greatest love,
+PAOK, travel, drugs,
+that's how we were taught since we were kids,
+Only in front of you Two Headed Eagle,
+my life seems significant,
+PAOK OLE OLE OLE OLE-O,
+Wherever you play I'll sing it to you!
+PAOK OLE OLE OLE OLE-O,
+For you I'll smash and burn!",
     link: 'https://www.youtube.com/embed/mQH7xooHIec',
     user_id: 1
   },
@@ -53,17 +59,20 @@ PAOK OLE OLE OLE OLE-O, For you I'll smash and burn!",
 τηνε μισώ και με μισεί, θέλει να με σκοτώσει,
 μα ελπίζω να φιλιώσει
 καιρό με τον καιρό.
+
 Έχει τα δόντια στην καρδιά, τα νύχια στο μυαλό μου
 κι εγώ για το καλό μου
 για κείνη πολεμώ
 κι όλου του κόσμου τα καλά με κάνει να μισήσω,
 για να της τραγουδήσω τον πιο βαρύ καημό.
+
 Όρη, λαγκάδια και γκρεμνά με σπρώχνει να περάσω,
 για να την αγκαλιάσω
 στον πιο τρελό χορό,
 κι όταν τις κρύες τις βραδιές θυμάται τα κλουβιά της,
 μου δίνει την προβιά της
 για να τηνε φορώ.
+
 Καμιά φορά απ' το πιοτό πέφτομε μεθυσμένοι,
 σχεδόν αγαπημένοι,
 καθείς να κοιμηθεί
@@ -95,8 +104,7 @@ almost lovingly,
 ourselves to sleep
 and this silence seems like the calm before the storm,
 like the final time
-that he will attack.
-https://lyricstranslate.com",
+that he will attack.",
     link: 'https://www.youtube.com/embed/heWLnEDzkkE',
     user_id: 1
   },
@@ -111,20 +119,24 @@ https://lyricstranslate.com",
 για να το αναθρέψει,
 και στην ποδιά της το 'βαλε,
 πάει να το ρεματίσει.
+
 Στο δρόμο που επήγαινε,
 στη στράτα που πηγαίνει
 μια πέρδικα την απαντά,
 μια πέρδικα της λέγει:
+
 Μωρή σκύλα, μωρή άνομη,
 μωρή μαριολεμένη,
 εγώ έχω δεκαοχτώ πουλιά,
 πάσχω να τ' αναθρέψω
 και συ έκανες χρυσόν υγιό,
 πας να τον ρεματίσεις;
+
 Και στην ποδιά της το 'βαλε,
 στο σπίτι της πηγαίνει
 το έβαλε στην κούνια του,
 το τραγουδά και λέει:
+
 Γιε μου σαν γίνεις κυνηγός,
 σαν γίνεις παλληκάρι,
 σαν ανταμώσεις πέρδικα,
@@ -143,7 +155,7 @@ down the path she saw
 a partridge felt for her
 a partridge told her:
 
-You bitch, you clumsy,
+You bitch, you lawless,
 you deranged woman!
 I have eighteen birds,
 I'm suffering to raise them
