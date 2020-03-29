@@ -7,19 +7,22 @@
     </div>
   </div>
 
+  <div class="lyrics">
+    <div class="row">
+      <div class="col-sm">
+        <h4>Original lyrics</h4>
+        <pre><%= @song.lyrics_original %></pre>
+      </div>
+      <div class="col-sm">
+        <h4>Translated lyrics</h4>
+        <pre><%= @song.lyrics_translated %></pre>
+      </div>
+    </div>
 
-  <div class="row">
-    <div class="col-sm">
-      <h4>Original lyrics</h4>
-      <pre><%= @song.lyrics_original %></pre>
-    </div>
-    <div class="col-sm">
-      <h4>Translated lyrics</h4>
-      <pre><%= @song.lyrics_translated %></pre>
-    </div>
+    <%= link_to 'Back to songs', songs_path, class: "btn btn-lg btn-primary" %>
   </div>
 
 
-  <%= link_to 'Back to songs', songs_path, class: "btn btn-lg btn-primary" %>
+
 
 </div>
