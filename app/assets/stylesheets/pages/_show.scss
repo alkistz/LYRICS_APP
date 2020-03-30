@@ -1,11 +1,21 @@
-.container {
+.top-part {
+  display: flex;
+
+}
+
+.infos {
+  width: auto;
+  margin-left: 15px;
+}
+
+.container-show {
   background-color: white;
   padding: 15px;
   margin-top: 30px;
 }
 
 .container .top-part {
-  width: 560px;
+  width: 100%;
 }
 
 .container .lyrics {

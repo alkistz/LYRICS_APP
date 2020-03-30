@@ -1,9 +1,12 @@
-<div class="container">
+<div class="container container-show">
+  <h1><%= @song.title %></h1>
   <div class="top-part">
-    <h1><%= @song.title %></h1>
-
-    <div class="video">
+    <div class="video flex-item">
       <iframe width="560" height="315" src="<%= @song.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="infos flex-item">
+      <h5>Translated by</h5>
+      <p><%= User.find(@song.user_id).username %></p>
     </div>
   </div>
 
@@ -20,6 +23,13 @@
     </div>
 
     <%= link_to 'Back to songs', songs_path, class: "btn btn-lg btn-primary" %>
+    <% if policy(@song).edit? %>
+      <%= link_to 'Edit info', edit_song_path(@song), class: "btn btn-lg btn-primary" %>
+    <% end %>
+
+    <% if policy(@song).destroy? %>
+      <%= link_to 'Remove song', song_path(@song), method: :delete, class: "btn btn-lg btn-danger"  %>
+    <% end %>
   </div>
 
 

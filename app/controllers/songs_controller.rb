@@ -38,6 +38,12 @@ class SongsController < ApplicationController
     redirect_to songs_path
   end
 
+  def dashboard
+    @user_songs = Song.where(user_id: current_user.id)
+    authorize @user_songs
+  end
+
+
   private
 
   def song_find
@@ -50,9 +56,7 @@ class SongsController < ApplicationController
   end
 
   def return_key(url)
-    binding.pry
     key = url.match(/\watch\?v=(.*)/)[1]
-
     return "https://www.youtube.com/embed/#{key[0..10]}"
   end
 
