@@ -10,7 +10,7 @@ class SongPolicy < ApplicationPolicy
   end
 
   def update?
-    true
+    user_is_owner?
   end
 
   def destroy?

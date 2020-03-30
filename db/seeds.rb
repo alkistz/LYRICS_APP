@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # DatabaseCleaner.allow_production = true
 # DatabaseCleaner.allow_remote_database_url = true
-# DatabaseCleaner.clean_with(:truncation)
+DatabaseCleaner.clean_with(:truncation)
 
 
 users = User.create([
@@ -52,7 +52,7 @@ Wherever you play I'll sing it to you!
 PAOK OLE OLE OLE OLE-O,
 For you I'll smash and burn!",
     link: 'https://www.youtube.com/embed/mQH7xooHIec',
-    user_id: 1
+    user_id: 2
   },
 
   {

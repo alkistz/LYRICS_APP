@@ -1,22 +1,23 @@
-<div class="container container-show">
-  <h1>My songs</h1>
+<div class="bg-image">
+  <div class="container container-show">
+    <h1>My songs</h1>
 
-  <div class="cards">
-    <% @user_songs.each do |song| %>
-    <div class="card-song">
-      <iframe width="350" height="200" src="<%= song.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <%= link_to song_path(song), class: "card-link" do %>
-        <div class="card-song-infos">
-          <h2><%= song.title %></h2>
-          <p><%= song.artist_name %></p>
-        </div>
+    <div class="cards">
+      <% @user_songs.each do |song| %>
+      <div class="card-song">
+        <iframe width="350" height="200" src="<%= song.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <%= link_to song_path(song), class: "card-link" do %>
+          <div class="card-song-infos">
+            <h2><%= song.title %></h2>
+            <p><%= song.artist_name %></p>
+          </div>
+        <% end %>
+      </div>
       <% end %>
     </div>
-    <% end %>
   </div>
-
-
 </div>
+
 
 
 
