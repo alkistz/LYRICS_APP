@@ -15,6 +15,12 @@ users = User.create([
     username: 'moyfas',
     email: 'alkiviadistzaras@yahoo.gr',
     password: 'xaxaxa123'
+  },
+
+  {
+    username: 'piroklani',
+    email: 'email@yahoo.gr',
+    password: '123456789'
   }
 
 ])
@@ -46,7 +52,7 @@ Wherever you play I'll sing it to you!
 PAOK OLE OLE OLE OLE-O,
 For you I'll smash and burn!",
     link: 'https://www.youtube.com/embed/mQH7xooHIec',
-    user_id: 1
+    user_id: 2
   },
 
   {

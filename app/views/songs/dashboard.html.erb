@@ -1,10 +1,8 @@
 <div class="container container-show">
-
-  <h1>List of songs</h1>
-  <h4>Select a song to see the original and translated lyrics</h4>
+  <h1>My songs</h1>
 
   <div class="cards">
-    <% @songs.each do |song| %>
+    <% @user_songs.each do |song| %>
     <div class="card-song">
       <iframe width="350" height="200" src="<%= song.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <%= link_to song_path(song), class: "card-link" do %>
@@ -17,12 +15,8 @@
     <% end %>
   </div>
 
+
 </div>
-
-
-
-
-
 
 
 

@@ -38,6 +38,12 @@ class SongsController < ApplicationController
     redirect_to songs_path
   end
 
+  def dashboard
+    @user_songs = Song.where(user_id: current_user.id)
+    authorize @user_songs
+  end
+
+
   private
 
   def song_find

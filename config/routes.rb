@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   resources :songs
 
+  get '/dashboard/:id', to: 'songs#dashboard', as: :dashboard
+
 end
