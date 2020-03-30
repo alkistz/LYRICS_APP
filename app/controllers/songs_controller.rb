@@ -12,7 +12,6 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     @song.link = return_key(@song.link)
-    @song.user_id = current_user
     authorize @song
 
     @song.save
@@ -29,7 +28,7 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.update(song_params)
-    @song.link = return_key(@song.link)
+    #@song.link = return_key(@song.link)
     redirect_to song_path(@song)
   end
 

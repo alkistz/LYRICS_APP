@@ -15,6 +15,12 @@ users = User.create([
     username: 'moyfas',
     email: 'alkiviadistzaras@yahoo.gr',
     password: 'xaxaxa123'
+  },
+
+  {
+    username: 'allos',
+    email: 'allos@yahoo.gr',
+    password: '123456789'
   }
 
 ])
