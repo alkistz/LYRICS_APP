@@ -27,9 +27,11 @@ class SongsController < ApplicationController
   end
 
   def update
-    @song = Song.update(song_params)
-    #@song.link = return_key(@song.link)
-    redirect_to song_path(@song)
+    if @song.update(song_params)
+      redirect_to song_path(@song)
+    else
+      render :edit
+    end
   end
 
   def destroy

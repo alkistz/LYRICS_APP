@@ -1,5 +1,6 @@
 <%= simple_form_for(@song) do |f| %>
 
+
   <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.input :title %>
   <%= f.input :artist_name %>
